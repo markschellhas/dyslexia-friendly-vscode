@@ -5,9 +5,6 @@ This extension is designed to make Visual Studio Code more accessible to users w
 Once you've downloaded and installed the font, enable the extension and you're good to go.
 
 
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
 ## Requirements
 
  OpenDyslexia font from the [OpenDyslexia website](https://opendyslexic.org/).

@@ -2,7 +2,6 @@ import * as vscode from 'vscode';
 import * as fs from 'fs';
 import * as path from 'path';
 
-
 async function getCurrentThemeData(): Promise<any> {
     const currentTheme = vscode.workspace.getConfiguration().get('workbench.colorTheme') as string;
     console.log('Current theme:', currentTheme);
@@ -68,7 +67,7 @@ export function activate(context: vscode.ExtensionContext) {
         }
 
         if (config.get('increaseFontSize')) {
-            await editorConfig.update('fontSize', 16, vscode.ConfigurationTarget.Global);
+            await editorConfig.update('fontSize', 14, vscode.ConfigurationTarget.Global);
         }
 
         if (config.get('increaseLetterSpacing')) {

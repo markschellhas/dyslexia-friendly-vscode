@@ -1,8 +1,13 @@
 {
   "name": "dyslexia-friendly",
-  "displayName": "Dyslexia Friendly",
+  "displayName": "Dyslexia Friendly VS Code",
   "description": "Made your code editor Dyslexia Friendly",
-  "version": "1.0.0",
+  "version": "1.0.2",
+  "icon": "images/image.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/markschellhas/dyslexia-friendly-vscode"
+  },
   "author": {
     "name": "Mark Schellhas",
     "email": "mark@schellhas.se"
@@ -16,7 +21,6 @@
   ],
   "activationEvents": [],
   "main": "./dist/extension.js",
-  "files": ["fonts/**/*", "dist/**/*", "dyslexia-friendly-theme.json"],
   "contributes": {
     "commands": [
       {

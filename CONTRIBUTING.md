@@ -31,9 +31,6 @@ Thank you for your interest in contributing to our VS Code extension for users w
 3. Describe your changes in detail, explaining the problem you're solving and how your solution works.
 4. Reference any related issues in your pull request description.
 
-## Code of Conduct
-
-Please note that this project adheres to a [Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code.
 
 ## Reporting Issues
 

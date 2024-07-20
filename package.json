@@ -1,0 +1,113 @@
+{
+  "name": "dyslexia-friendly",
+  "displayName": "Dyslexia Friendly",
+  "description": "Made your code editor Dyslexia Friendly",
+  "version": "1.0.0",
+  "author": {
+    "name": "Mark Schellhas",
+    "email": "mark@schellhas.se"
+  },
+  "publisher": "markschellhas",
+  "engines": {
+    "vscode": "^1.91.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "files": ["fonts/**/*", "dist/**/*", "dyslexia-friendly-theme.json"],
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.changeToDyslexiaFriendly",
+        "title": "Make Dyslexia Friendly"
+      }
+    ],
+    "configuration": {
+      "title": "Dyslexia Friendly",
+      "properties": {
+        "dyslexiaFriendly.boldFontWeight": {
+          "type": "string",
+          "enum": [
+            "bold",
+            "bolder",
+            "500",
+            "600",
+            "700",
+            "800",
+            "900"
+          ],
+          "default": "bold",
+          "description": "Font weight to use instead of italics"
+        },
+        "dyslexiaFriendly.useOpenDyslexicFont": {
+          "type": "boolean",
+          "default": true,
+          "description": "Use OpenDyslexic font"
+        },
+        "dyslexiaFriendly.increaseFontSize": {
+          "type": "boolean",
+          "default": true,
+          "description": "Increase font size"
+        },
+        "dyslexiaFriendly.increaseLetterSpacing": {
+          "type": "boolean",
+          "default": true,
+          "description": "Increase letter spacing"
+        },
+        "dyslexiaFriendly.replaceBoldInEditor": {
+          "type": "boolean",
+          "default": true,
+          "description": "Replace italics with bold in editor"
+        },
+        "dyslexiaFriendly.replaceBoldInCode": {
+          "type": "boolean",
+          "default": true,
+          "description": "Replace italics with bold in code"
+        }
+      }
+    },
+    "menus": {
+      "editor/context": [
+        {
+          "when": "editorTextFocus",
+          "command": "extension.changeToDyslexiaFriendly",
+          "group": "navigation"
+        }
+      ]
+    },
+    "themes": [
+          {
+            "label": "Dyslexia Friendly",
+            "uiTheme": "vs-dark",
+            "path": "./dyslexia-friendly-current-theme.json"
+          }
+        ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.91.0",
+    "@types/mocha": "^10.0.7",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^7.14.1",
+    "@typescript-eslint/parser": "^7.11.0",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.5",
+    "ts-loader": "^9.5.1",
+    "webpack": "^5.92.1",
+    "webpack-cli": "^5.1.4",
+    "@vscode/test-cli": "^0.0.9",
+    "@vscode/test-electron": "^2.4.0"
+  }
+}

@@ -1,0 +1,40 @@
+{
+    "name": "Dyslexia Friendly",
+    "tokenColors": [
+        {
+            "scope": [
+                "*"
+            ],
+            "settings": {
+                "fontStyle": "normal"
+            }
+        },
+        {
+            "scope": [
+                "markup.italic",
+                "emphasis"
+            ],
+            "settings": {
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "scope": [
+                "keyword",
+                "storage",
+                "entity.name.type"
+            ],
+            "settings": {
+                "fontStyle": "normal"
+            }
+        },
+        {
+            "scope": [
+                "entity.name.function"
+            ],
+            "settings": {
+                "fontStyle": "bold"
+            }
+        }
+    ]
+}
